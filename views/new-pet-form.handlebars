@@ -4,9 +4,10 @@
     <div class="row justify-content-center">
         <div class="col-6">
 
-            <h1>new pet form</h1>
+            <h1>New Pet Form</h1>
 
-            <form class='new-pet'>
+            <form class='new-pet' data-id="{{user_id}}">
+
                 <div class="form-group">
                     <label for="exampleInputEmail1">Pet Name</label>
                     <input type="input" class="form-control" id="new-pet-name" aria-describedby="emailHelp"
@@ -29,6 +30,7 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Add New Pet</button>
+                
             </form>
 
 
@@ -36,5 +38,8 @@
     </div>
 </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
-<script src="./js/addPet.js"></script>
+<script src="/js/addPet.js"></script>
