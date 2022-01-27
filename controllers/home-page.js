@@ -2,6 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth')
 const Pet = require('../models/Pet')
 
+
 // router.get('/', withAuth, async (req, res) => {
 // res.render('homepage', {
 //     loggedIn: req.session.loggedIn,
