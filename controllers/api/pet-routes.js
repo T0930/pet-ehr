@@ -3,13 +3,33 @@ const { Pet } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
+router.get('/', async (req, res) => {
+  const viewAllPets = await Pet.findAll({
+    where: {
+      owner_id: req.session.user_id,
+    }
+  });
+  res.json(viewAllPets);
+})
 
-router.post('/', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
+    try {
+      const dbPetData = await Pet.findByPk(req.params.id);
+      const newPetData = dbPetData.get({ plain: true });
+      //res.render('handlebars', {pet, loggedIn: req.session.loggedIn})
+      res.status(200).json(newPetData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+})
+
+router.post('/', async (req, res) => {
     try {
       const newPet = await Pet.create({
           pet_name: req.body.pet_name,
           pet_type: req.body.pet_type,
-          owner_id: req.body.owner_id, // REMOVE FROM CODE?
+          owner_id: req.session.user_id, // SHOULD GRAB owner_id from SESSION user_id
       });
       res.status(200).json(newPet);
     } catch (err) {
@@ -18,7 +38,7 @@ router.post('/', withAuth, async (req, res) => {
   });
 
   //Update Pet by ID *** NOT WORKING AT THIS TIME ***
-  router.put('/:id', withAuth, async (req, res) => {
+  router.put('/:id', async (req, res) => {
     try {
       const petData = await Pet.update(
         {
@@ -45,7 +65,7 @@ router.post('/', withAuth, async (req, res) => {
       const petData = await Pet.destroy({
         where: {
           id: req.params.id,
-          user_id: req.session.user_id,
+          // user_id: req.session.user_id,
         },
       });
   
