@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
       const newPet = await Pet.create({
           pet_name: req.body.pet_name,
           pet_type: req.body.pet_type,
-          user_id: req.session.user_id, // SHOULD GRAB owner_id from SESSION user_id
+          user_id: req.body.user_id, // SHOULD GRAB owner_id from SESSION user_id
       });
       res.status(200).json(newPet);
     } catch (err) {

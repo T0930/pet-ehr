@@ -15,7 +15,9 @@ router.get('/login', (req, res) =>{
 })
 
 router.get('/new', (req, res) =>{
-    res.render('new-pet-form')
+    res.render('new-pet-form', {
+        user_id: 1,
+    })
 })
 
 module.exports = router; 
