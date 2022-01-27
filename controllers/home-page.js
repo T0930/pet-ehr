@@ -14,4 +14,8 @@ router.get('/login', (req, res) =>{
     res.render('loginhomepage')
 })
 
+router.get('/new', (req, res) =>{
+    res.render('new-pet-form')
+})
+
 module.exports = router; 
