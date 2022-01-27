@@ -24,4 +24,30 @@ const newSignUp = async (event) => {
   
   
   document.querySelector('.signup-form').addEventListener('submit', newSignUp);
+
+
+  const signIn = async (event) => {
+    event.preventDefault();
+    console.log('hello')
   
+    const email = document.querySelector('#login-email').value.trim();
+    const password = document.querySelector('#login-password').value.trim();
+    console.log(email)
+    console.log(password)
+
+    if (email && password) {
+      const response = await fetch('/api/user/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  document.querySelector('.sign-in').addEventListener('submit', signIn);
