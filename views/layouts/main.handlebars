@@ -12,10 +12,13 @@
         <div class="container-fluid py-3 custom-container">
             <h1 class="display-5 fw-bold text-left header-text">petRec <img src="/images/veterinarian.png"
                     alt="pet hospital" style="width:30px;height:30px"></h1>
+               {{#if loggedIn}}
+            <button class='logout'>Logout</button>
+            {{/if}}
+     
         </div>
 
     </div>
-
 
 {{{body}}}
 
