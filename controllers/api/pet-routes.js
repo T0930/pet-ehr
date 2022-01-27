@@ -3,14 +3,15 @@ const { Pet } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', async (req, res) => {
-  const viewAllPets = await Pet.findAll({
-    where: {
-      user_id: req.session.user_id,
-    }
-  });
-  res.json(viewAllPets);
-})
+// router.get('/', async (req, res) => {
+//   const viewAllPets = await Pet.findAll({
+//     where: {
+//       user_id: req.session.user_id,
+//     }
+//   });
+//   res.json(viewAllPets);
+// })
+
 
 router.get('/:id', async (req, res) => {
     try {
