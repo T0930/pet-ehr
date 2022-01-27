@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { Pet } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
       const newPet = await Pet.create({
           pet_name: req.body.pet_name,
@@ -17,7 +18,7 @@ router.post('/', async (req, res) => {
   });
 
   //Update Pet by ID *** NOT WORKING AT THIS TIME ***
-  router.put('/:id', async (req, res) => {
+  router.put('/:id', withAuth, async (req, res) => {
     try {
       const petData = await Pet.update(
         {
