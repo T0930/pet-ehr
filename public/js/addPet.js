@@ -1,15 +1,14 @@
-const newSignUp = async (event) => {
+const newPetProfile = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#new-username').value.trim();
-    const email = document.querySelector('#new-email').value.trim();
-    const password = document.querySelector('#new-password').value.trim();
+    const name = document.querySelector('#new-pet-name').value.trim();
+    const type = document.querySelector('#type').value.trim();
  
   
-    if (username && email && password) {
-      const response = await fetch('/api/user', {
+    if ( name && type) {
+      const response = await fetch('/api/pet', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ name, type }),
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -17,10 +16,10 @@ const newSignUp = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to add pet.');
       }
     }
   };
   
   
-  document.querySelector('.signup-form').addEventListener('submit', newSignUp);
+  document.querySelector('.new-pet').addEventListener('click', newPetProfile);
