@@ -1,14 +1,18 @@
+const session = require("express-session");
+// const user_id = 1;
+
 const newPetProfile = async (event) => {
     event.preventDefault();
+  console.log('hello');
   
-    const name = document.querySelector('#new-pet-name').value.trim();
-    const type = document.querySelector('#type').value.trim();
- 
+    const pet_name = document.querySelector('#new-pet-name').value.trim();
+    const pet_type = document.querySelector('#type').value.trim();
+
   
-    if ( name && type) {
+    if ( pet_name && pet_type && req.session.user_id) {
       const response = await fetch('/api/pet', {
         method: 'POST',
-        body: JSON.stringify({ name, type }),
+        body: JSON.stringify({ pet_name, pet_type, req.session.}),
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -22,4 +26,4 @@ const newPetProfile = async (event) => {
   };
   
   
-  document.querySelector('.new-pet').addEventListener('click', newPetProfile);
+  document.querySelector('.new-pet').addEventListener('submit', newPetProfile);
