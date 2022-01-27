@@ -20,7 +20,7 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    owner_id :{
+    user_id :{
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

@@ -3,11 +3,11 @@ const  User= require('./User')
 
 
 User.hasMany(Pet, {
-    foreignKey: 'owner_id'
+    foreignKey: 'user_id'
 })
 
 Pet.belongsTo(User, {
-    foreignKey: 'owner_id'
+    foreignKey: 'user_id'
 })
 
 module.exports = { Pet, User }
