@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
   const viewAllPets = await Pet.findAll({
     where: {
-      owner_id: req.session.user_id,
+      user_id: req.session.user_id,
     }
   });
   res.json(viewAllPets);
@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
       const newPet = await Pet.create({
           pet_name: req.body.pet_name,
           pet_type: req.body.pet_type,
-          owner_id: req.session.user_id, // SHOULD GRAB owner_id from SESSION user_id
+          user_id: req.session.user_id, // SHOULD GRAB owner_id from SESSION user_id
       });
       res.status(200).json(newPet);
     } catch (err) {
