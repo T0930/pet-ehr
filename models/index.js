@@ -2,7 +2,7 @@ const  Pet = require('./Pet')
 const  User= require('./User')
 const Dx = require('./Dx')
 const Meds = require('./Meds')
-const Vax = require('./Vax')
+// const Vax = require('./Vax')
 
 
 User.hasMany(Pet, {
@@ -28,12 +28,12 @@ Meds.belongsTo(Pet, {
     foreignKey: 'pet_id'
 })
 
-Pet.hasMany(Vax, {
-    foreignKey: 'pet_id'
-})
+// Pet.hasMany(Vax, {
+//     foreignKey: 'pet_id'
+// })
 
-Vax.belongsTo(Pet, {
-    foreignKey: 'pet_id'
-})
+// Vax.belongsTo(Pet, {
+//     foreignKey: 'pet_id'
+// })
 
-module.exports = { Pet, User, Dx, Meds, Vax }
+module.exports = { Pet, User, Dx, Meds }
