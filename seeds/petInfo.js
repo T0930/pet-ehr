@@ -7,6 +7,8 @@ const petData = [
         gender: 'Male',
         breed: 'Yellow Lab',
         age: 4,
+        vet_clinic: 'Fairway Knolls',
+        vet_name: 'Dr. Smith',
         user_id: 1
     },
     {
@@ -15,6 +17,8 @@ const petData = [
         gender: 'Female',
         breed: 'Domestic Short Hair',
         age: 8,
+        vet_clinic: 'Eastland Companion Animal Hospital',
+        vet_name: 'Dr. Turner',
         user_id: 1
     },
     {
@@ -23,6 +27,8 @@ const petData = [
         gender: 'Male',
         breed: 'Doberman',
         age: 1,
+        vet_clinic: 'Bortell Animal Hospital',
+        vet_name: 'Dr. Bortell',
         user_id: 1
     },
     {
@@ -31,6 +37,8 @@ const petData = [
         gender: 'Male',
         breed: 'Clydesdale',
         age: 10,
+        vet_clinic: 'Iowa State Animal Hospital',
+        vet_name: 'Dr. Ranger',
         user_id: 1
     }
 ];

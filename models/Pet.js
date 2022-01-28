@@ -32,6 +32,14 @@ Pet.init(
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    vet_clinic: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    vet_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id:{
       type: DataTypes.INTEGER,
       allowNull: false,
