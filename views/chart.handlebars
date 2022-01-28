@@ -1,111 +1,131 @@
 <div class="container card-container">
 
-        <div class="row chart-row justify-content-between">
-            <div class="col-3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/140x100" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Pet Name</h5>
-                    </div>
+    <div class="row chart-row justify-content-between">
+        <div class="col-3">
+            <div class="card">
+                <img src="https://via.placeholder.com/140x100" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{pet.pet_name}}</h5>
                 </div>
             </div>
+            <div><button>Export chart to PDF</button></div>
+        </div>
 
-            <div class="col-9">
-                <div class="accordion" id="aone">
-                    <div class="accordion-item custom-item">
-                        <h2 class="accordion-header custom-header" id="panelsStayOpen-headingOne">
-                            <button class="accordion-button custom-abuttonOne" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                aria-controls="panelsStayOpen-collapseOne">
-                                Demographics
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                            aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <div class="demo"><strong>Name: </strong></div>
-                                <div class="demo"><strong>Age: </strong></div>
-                                <div class="demo"><strong>Gender: </strong></div>
-                                <div class="demo"><strong>Breed: </strong></div>
-                                <!-- <div class="demo"><strong>Microchip ID: </strong></div> -->
-                            </div>
+        <div class="col-9">
+            <div class="accordion" id="aone">
+                <div class="accordion-item custom-item">
+                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button custom-abuttonOne" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Demographics
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <div class="demo"><strong>Name:</strong> {{pet.pet_name}}</div>
+                            <div class="demo"><strong>Age: </strong>{{pet.age}} </div>
+                            <div class="demo"><strong>Gender:</strong> {{pet.gender}} </div>
+                            <div class="demo"><strong>Breed:</strong> {{pet.breed}}</div>
                         </div>
                     </div>
-                    <div class="accordion-item custom-item">
-                        <h2 class="accordion-header custom-header" id="panelsStayOpen-headingTwo">
-                            <button class="accordion-button collapsed custom-abuttonTwo" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                Diagnoses
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingTwo">
-                            <div class="accordion-body">
-                                <div class="demo">Diabetes </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item custom-item">
-                        <h2 class="accordion-header custom-header" id="panelsStayOpen-headingThree">
-                            <button class="accordion-button collapsed custom-abuttonThree" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Medications
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingThree">
-                            <div class="accordion-body">
-                                <table style="width:100%">
-                                    <tr>
-                                      <th>Medication Name</th>
-                                      <th>Last Given</th>
-                                      <th>Next Due</th>
-                                    </tr>
-                                    
-                                    <tr>
-                                      <td>HeartGuard</td>
-                                      <td>Jan 1, 2022</td>
-                                      <td>Feb 1, 2022</td>
-                                      <td><button>Edit</button></td>
-                                    </tr>
-                                    </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item custom-item">
-                        <h2 class="accordion-header custom-header" id="panelsStayOpen-headingFour">
-                            <button class="accordion-button collapsed custom-abuttonFour" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
-                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                                Vaccinations
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="panelsStayOpen-headingFour">
-                            <div class="accordion-body">
-                                <table style="width:95%">
-                                    <tr>
-                                      <th>Vaccine</th>
-                                      <th>Last Given</th>
-                                      <th>Next Due</th>
-                                    </tr>
-                                    
-                                    <tr>
-                                      <td>Alfreds Futterkiste</td>
-                                      <td>Maria Anders</td>
-                                      <td>Germany</td>
-                                    </tr>
-                                    </table>
-                                    <button class="newVax">Add New</button>
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+                <div class="accordion-item custom-item">
+                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed custom-abuttonTwo" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Diagnoses
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            {{#each pet.dxes as |dx|}}
+                            <div class="demo">{{dx.diagnosis}} </div>
+                            {{/each}}
+<button class="newVax">Add New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item custom-item">
+                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed custom-abuttonThree" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Medications
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Medication Name</th>
+                                    <th>Last Given</th>
+                                    <th>Next Due</th>
+                                </tr>
+                                {{#each pet.meds as |med|}}
+                                <tr>
+                                    <td>{{med.medication}}</td>
+                                    <td>{{med.last_given}}</td>
+                                    <td>{{med.next_due}}</td>
+                                    <td><button>Delete</button></td>
+                                </tr>
+                                {{/each}}
+
+                            </table>
+                            <button class="newVax">Add New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item custom-item">
+                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingFour">
+                        <button class="accordion-button collapsed custom-abuttonFour" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                            Vaccinations
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Vaccine</th>
+                                    <th>Last Given</th>
+                                    <th>Next Due</th>
+                                </tr>
+                                {{#each pet.vaxes as |vax|}}
+                                <tr>
+                                    <td>{{vax.vax_name}}</td>
+                                    <td>{{vax.administered_date}}</td>
+                                    <td>{{vax.next_due}}</td>
+                                       <td><button>Delete</button></td>
+                                </tr>
+                                {{/each}}
+
+                                
+                            </table>
+                            <br>
+                            <table>
+                            <div><strong>Add New</strong></div>
+                                <tr>
+                                    <td>new vaccine name input field</td>
+                                    <td>administered date</td>
+                                    <td>next due</td>
+                                       <td><button>Submit</button></td>
+                                </tr>
+                                </table>
+
+                            {{!-- <button class="newVax">Add New</button> --}}
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+</div>

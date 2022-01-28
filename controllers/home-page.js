@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth')
-const Pet = require('../models/Pet')
+const {Pet, Meds, Vax, Dx} = require('../models')
 
 //commented out while doing chart routes (this is the one we want)
 // router.get('/login', (req, res) =>{
@@ -18,6 +18,21 @@ router.get('/login', (req, res) =>{
     //    return;
     // }
     res.render('chart')
+})
+
+router.get('/chart', async (req, res) => {
+ try {
+  const chartData = await Pet.findOne({
+    where: { 
+      id: 1
+    },
+    include: [{model: Meds}, {model: Dx}, {model: Vax}]});
+    const pet = chartData.get({ plain: true });
+    res.render('chart',
+      {pet});
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
 
 router.get('/new', (req, res) =>{
@@ -44,6 +59,8 @@ router.get('/', async (req, res) => {
     }
   });
   
+
+
 
   
 
