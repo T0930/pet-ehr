@@ -13,26 +13,6 @@ const withAuth = require('../../utils/auth');
 // })
 
 
-router.get('/', async (req, res) => {
-  try {
-    // Get all pets
-    const viewAllPets = await Pet.findAll({
-      where: {
-        user_id: req.session.user_id,
-      }
-    });
-    // Serialize data so the template can read it
-    const pets = viewAllPets.map((pet) => pet.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      pets, 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get('/:id', async (req, res) => {
     try {
       const dbPetData = await Pet.findByPk(req.params.id);
