@@ -16,8 +16,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const newVax = await Vax.create({
-          vax_name: req.body.pet_name,
-          vax_type: req.body.pet_type,
+          vax_name: req.body.vax_name,
+          vax_type: req.body.vax_type,
+          administered_data: req.body.administered_date,
+          next_due: req.body.next_due,
+          pet_id: req.body.pet_id,
       });
       res.status(200).json(newVaX);
     } catch (err) {
