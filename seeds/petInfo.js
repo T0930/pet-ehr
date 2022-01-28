@@ -14,7 +14,7 @@ const petData = [
     {
         pet_name: 'Shadow',
         pet_type: "Dog",
-        user_id: "1"
+        user_id: 1
     },
     {
         pet_name: 'Bullseye',
