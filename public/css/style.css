@@ -44,3 +44,24 @@ a {
 .footer {
    margin-bottom: 0;
 }
+
+.custom-abuttonOne {
+    background-color: rgb(69, 124, 168);
+    color: white;
+
+}
+
+.custom-abuttonTwo {
+    background-color: rgb(51, 131, 64);
+    color: white;
+}
+
+.custom-abuttonThree {
+    background-color: rgb(170, 90, 143);
+    color: white;
+}
+
+.custom-abuttonFour {
+    background-color: rgb(158, 102, 17);
+    color: white;
+}
