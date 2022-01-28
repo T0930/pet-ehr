@@ -10,6 +10,6 @@ const logout = async function() {
       alert('Failed to log out');
     }
   };
-//   change qS arg to match html
-  document.querySelector('#logout-link').addEventListener('click', logout);
+
+  document.querySelector('.logout').addEventListener('click', logout);
   
