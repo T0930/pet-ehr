@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { Vax, Pet } = require('../../models');
+const { Meds, Pet } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// *** /api/vax *** - endpoint
+// *** /api/meds *** - endpoint
 
 router.get('/', async (req, res) => {
   try {
-    const vaxDb = await Vax.findAll({include: [{model: Pet}]});
-    res.status(200).json(vaxDb);
+    const medsDb = await Meds.findAll({include: [{model: Pet}]});
+    res.status(200).json(medsDb);
   } catch (err) {
       res.status(500).json;
   }
@@ -15,14 +15,13 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-      const newVax = await Vax.create({
-          vax_name: req.body.vax_name,
-          vax_type: req.body.vax_type,
-          administered_data: req.body.administered_date,
+      const newMed = await Meds.create({
+          medication: req.body.medication,
+          last_given: req.body.last_given,
           next_due: req.body.next_due,
           pet_id: req.body.pet_id,
       });
-      res.status(200).json(newVaX);
+      res.status(200).json(newMed);
     } catch (err) {
       res.status(400).json(err);
     }
@@ -30,18 +29,18 @@ router.post('/', async (req, res) => {
 
   router.delete('/:id', async (req, res) => {
     try {
-      const vaxData = await Vax.destroy({
+      const medData = await Meds.destroy({
         where: {
           id: req.params.id,
         },
       });
   
-      if (!vaxData) {
-        res.status(404).json({ message: 'No vaccine found with this id!' });
+      if (!medData) {
+        res.status(404).json({ message: 'No medication found with this id!' });
         return;
       }
   
-      res.status(200).json(vaxData);
+      res.status(200).json(medData);
     } catch (err) {
       res.status(500).json(err);
     }
