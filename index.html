@@ -11,23 +11,21 @@
 </head>
 
 <body>
-
     <div class="pt-4 mb-4 custom-jumbo">
         <div class="container-fluid py-3 custom-container">
-            <h1 class="display-5 fw-bold text-left header-text">petRec <img src="public/images/veterinarian.png"
-                    alt="pet hospital" style="width:30px;height:30px"></h1>
-
-
+            <h1 class="display-5 fw-bold text-left header-text">
+                petRec
+                <img src="public/images/veterinarian.png" alt="pet hospital" style="width: 30px; height: 30px" />
+            </h1>
         </div>
     </div>
-    <button class='logout'>Logout</button>
+    <button class="logout">Logout</button>
 
     <div class="container card-container">
-
         <div class="row chart-row justify-content-between">
             <div class="col-3">
                 <div class="card">
-                    <img src="https://via.placeholder.com/140x100" class="card-img-top" alt="...">
+                    <img src="https://via.placeholder.com/140x100" class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title text-center">Pet Name</h5>
                     </div>
@@ -47,11 +45,22 @@
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
-                                <div class="demo"><strong>Name: </strong></div>
-                                <div class="demo"><strong>Age: </strong></div>
-                                <div class="demo"><strong>Gender: </strong></div>
-                                <div class="demo"><strong>Breed: </strong></div>
-                                <!-- <div class="demo"><strong>Microchip ID: </strong></div> -->
+                                <div class="container justify-content-between">
+                                    <div class="row">
+                                        <div class="col">
+                                        <div class="demo"><strong>Pet Information </strong></div>
+                                            <div class="demo"><strong>Name: </strong></div>
+                                            <div class="demo"><strong>Age: </strong></div>
+                                            <div class="demo"><strong>Gender: </strong></div>
+                                            <div class="demo"><strong>Breed: </strong></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="demo"><strong>Veterinarian Information </strong></div>
+                                            <div class="demo"><strong>Vet Clinic: </strong></div>
+                                            <div class="demo"><strong>Vet Name: </strong></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,8 +75,7 @@
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
-                                <div class="demo">Diabetes </div>
-
+                                <div class="demo">Diabetes</div>
                             </div>
                         </div>
                     </div>
@@ -82,21 +90,20 @@
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body">
-                                <table style="width:100%">
+                                <table style="width: 100%">
                                     <tr>
-                                      <th>Medication Name</th>
-                                      <th>Last Given</th>
-                                      <th>Next Due</th>
+                                        <th>Medication Name</th>
+                                        <th>Last Given</th>
+                                        <th>Next Due</th>
                                     </tr>
                                     {{#each}}
                                     <tr>
-                                      <td>HeartGuard</td>
-                                      <td>Jan 1, 2022</td>
-                                      <td>Feb 1, 2022</td>
-                                      <td><button>Delete</button></td>
+                                        <td>HeartGuard</td>
+                                        <td>Jan 1, 2022</td>
+                                        <td>Feb 1, 2022</td>
+                                        <td><button>Delete</button></td>
                                     </tr>
-                                    
-                                    </table>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -111,40 +118,32 @@
                         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingFour">
                             <div class="accordion-body">
-                                <table style="width:95%">
+                                <table style="width: 95%">
                                     <tr>
-                                      <th>Vaccine</th>
-                                      <th>Last Given</th>
-                                      <th>Next Due</th>
+                                        <th>Vaccine</th>
+                                        <th>Last Given</th>
+                                        <th>Next Due</th>
                                     </tr>
-                                    
-                                    <tr>
-                                      <td>Alfreds Futterkiste</td>
-                                      <td>Maria Anders</td>
-                                      <td>Germany</td>
-                                    </tr>
-                                    </table>
-                                    <button class="newVax">Add New</button>
 
+                                    <tr>
+                                        <td>Alfreds Futterkiste</td>
+                                        <td>Maria Anders</td>
+                                        <td>Germany</td>
+                                    </tr>
+                                </table>
+                                <button class="newVax">Add New</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>v>
-
-
-
-
-
+    </div>
+    v>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
-
