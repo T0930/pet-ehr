@@ -27,12 +27,9 @@ router.get('/chart', async (req, res) => {
       id: 1
     },
     include: [{model: Meds}, {model: Dx}, {model: Vax}]});
-    const allData = chartData.map((data) => data.get({ plain: true}));
-    console.log(allData)
-    // res.render('chart')
-    res.render('chart', {
-      allData,
-    });
+    const pet = chartData.get({ plain: true });
+    res.render('chart',
+      {pet});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -62,6 +59,8 @@ router.get('/', async (req, res) => {
     }
   });
   
+
+
 
   
 

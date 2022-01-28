@@ -2,7 +2,8 @@ const sequelize = require('../config/connection');
 const seedUsers = require('./userInfo');
 const seedPets = require('./petInfo');
 const seedDx = require('./dx');
-const seedMeds = require('./meds')
+const seedMeds = require('./meds');
+const seedVaxs = require('./vaxInfo');
 
 
 
@@ -12,6 +13,7 @@ await seedUsers();
 await seedPets();
 await seedDx();
 await seedMeds();
+await seedVaxs();
 
  
 
