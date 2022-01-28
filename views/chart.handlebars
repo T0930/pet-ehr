@@ -56,7 +56,12 @@
                                         {{#each pet.dxes as |dx|}}
                                         <div class="demo">{{dx.diagnosis}} </div>
                                         {{/each}}
-                                        <button class="newVax">Add New</button>
+                                        <br>
+                                    <div class="input-group">
+                                    <span class="input-group-text">Add New</span>
+                                    <input type="text" placeholder = "Diagnosis" aria-label="Diagnosis" class="form-control">
+                                    <button>Save</button>
+                                  </div>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +92,15 @@
                                             {{/each}}
 
                                         </table>
-                                        <button class="newVax">Add New</button>
+                                        <br>
+                                    <div class="input-group">
+                                    <span class="input-group-text">Add New</span>
+                                    <input type="text" placeholder = "Medication" aria-label="Medication" class="form-control">
+                                    <input type="text" placeholder = "Last Given" aria-label="mLast-Given" class="form-control">
+                                    <input type="text" placeholder = "Next Due" aria-label="mNext-Due" class="form-control">
+                                    <button>Save</button>
+                                    </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -120,17 +133,15 @@
 
                                         </table>
                                         <br>
-                                        <table>
-                                            <div><strong>Add New</strong></div>
-                                            <tr>
-                                                <td>new vaccine name input field</td>
-                                                <td>administered date</td>
-                                                <td>next due</td>
-                                                <td><button>Submit</button></td>
-                                            </tr>
-                                        </table>
-
-                                        {{!-- <button class="newVax">Add New</button> --}}
+                                     
+                                  <div class="input-group">
+                                    <span class="input-group-text">Add New</span>
+                                    <input type="text" placeholder = "Vaccine" aria-label="Vaccine" class="form-control">
+                                    <input type="text" placeholder = "Last Given" aria-label="vLast-Given" class="form-control">
+                                    <input type="text" placeholder = "Next Due" aria-label="vNext-Due" class="form-control">
+                                    <button>Save</button>
+                                  </div>
+                                    
 
                                     </div>
                                 </div>
