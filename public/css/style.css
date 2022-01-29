@@ -65,3 +65,19 @@ a {
     background-color: rgb(158, 102, 17);
     color: white;
 }
+
+.new-pet {
+    background-color: rgb(144, 207, 144);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    border-radius: 30px;
+}
