@@ -16,14 +16,7 @@ const newPetProfile = async (event) => {
     const newPet = document.querySelector('.new-pet');
     
     const user_id = newPet.getAttribute('data-id')
-    console.log(pet_name)
-    console.log(gender)
-    console.log(age)
-    console.log(pet_type)
-    console.log(breed)
-    console.log(vet_clinic)
-    console.log(vet_name)
-    
+
 
 
   

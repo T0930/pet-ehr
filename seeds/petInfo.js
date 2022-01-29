@@ -19,7 +19,7 @@ const petData = [
         age: 8,
         vet_clinic: 'Eastland Companion Animal Hospital',
         vet_name: 'Dr. Turner',
-        user_id: 1
+        user_id: 2
     },
     {
         pet_name: 'Shadow',
@@ -29,7 +29,7 @@ const petData = [
         age: 1,
         vet_clinic: 'Bortell Animal Hospital',
         vet_name: 'Dr. Bortell',
-        user_id: 1
+        user_id: 2
     },
     {
         pet_name: 'Bullseye',
@@ -40,11 +40,18 @@ const petData = [
         vet_clinic: 'Iowa State Animal Hospital',
         vet_name: 'Dr. Ranger',
         user_id: 1
-    }
+    },
+    {
+        pet_name: 'Sydney',
+        pet_type: "Cat",
+        gender: 'Female',
+        breed: 'Domestic Short Hair',
+        age: 17,
+        vet_clinic: 'Ashland Animal Hospital',
+        vet_name: 'Dr. Ryan',
+        user_id: 4
+    },
 ];
 
-const seedPets = () => Pet.bulkCreate(petData, {
-    individualHooks: true,
-    returning: true,
-});
+const seedPets = () => Pet.bulkCreate(petData);
 module.exports = seedPets

@@ -3,13 +3,13 @@ const withAuth = require('../utils/auth')
 const {Pet, Meds, Vax, Dx} = require('../models')
 
 // commented out while doing chart routes (this is the one we want)
-// router.get('/', (req, res) =>{
-//     // if (req.session.loggedIn) {
-//     //     res.redirect('/')
-//     //    return;
-//     // }
-//     res.render('loginhomepage')
-// })
+router.get('/', (req, res) =>{
+    if (req.session.loggedIn) {
+        res.redirect('/profile')
+       return;
+    }
+    res.render('loginhomepage')
+})
 
 //delete after making chart routes!
 router.get('/login', (req, res) =>{
@@ -36,19 +36,18 @@ router.get('/chart/:id', async (req, res) => {
 
 router.get('/new', (req, res) =>{
     res.render('new-pet-form', {
-        user_id: 1,
+        user_id: req.session.user_id,
     })
 })
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
-      const viewAllPets = await Pet.findAll()
-      //   where: {
-      //     user_id: 1
-      //   }
-      // });
+      const viewAllPets = await Pet.findAll({
+      where: {
+          user_id: req.session.user_id,
+        }
+      })
       const pets = viewAllPets.map((pet) => pet.get({ plain: true }));
-
       res.render('homepage', {
         pets,
         loggedIn: req.session.loggedIn,
