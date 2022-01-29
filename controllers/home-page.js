@@ -2,12 +2,12 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth')
 const {Pet, Meds, Vax, Dx} = require('../models')
 
-//commented out while doing chart routes (this is the one we want)
-// router.get('/login', (req, res) =>{
-//     if (req.session.loggedIn) {
-//         res.redirect('/')
-//        return;
-//     }
+// commented out while doing chart routes (this is the one we want)
+// router.get('/', (req, res) =>{
+//     // if (req.session.loggedIn) {
+//     //     res.redirect('/')
+//     //    return;
+//     // }
 //     res.render('loginhomepage')
 // })
 
@@ -20,16 +20,15 @@ router.get('/login', (req, res) =>{
     res.render('chart')
 })
 
-router.get('/chart', async (req, res) => {
+router.get('/chart/:id', async (req, res) => {
  try {
   const chartData = await Pet.findOne({
-    where: { 
-      id: 1
+    where: {
+      id: req.params.id,
     },
     include: [{model: Meds}, {model: Dx}, {model: Vax}]});
     const pet = chartData.get({ plain: true });
-    res.render('chart',
-      {pet});
+    res.render('chart', {pet});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -41,7 +40,7 @@ router.get('/new', (req, res) =>{
     })
 })
 
-router.get('/', async (req, res) => {
+router.get('/profile', async (req, res) => {
     try {
       const viewAllPets = await Pet.findAll()
       //   where: {

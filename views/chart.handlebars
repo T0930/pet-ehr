@@ -1,3 +1,5 @@
+<button class="goBack">Back</button>
+
 <div class="container card-container">
 
     <div class="row chart-row justify-content-between">
@@ -56,7 +58,7 @@
                                         {{#each pet.dxes as |dx|}}
                                         <div class="demo">{{dx.diagnosis}} </div>
                                         {{/each}}
-                                        <br>
+                                        <br><br>
                                     <div class="input-group">
                                     <span class="input-group-text">Add New</span>
                                     <input type="text" placeholder = "Diagnosis" aria-label="Diagnosis" class="form-control">
@@ -92,7 +94,7 @@
                                             {{/each}}
 
                                         </table>
-                                        <br>
+                                        <br><br>
                                     <div class="input-group">
                                     <span class="input-group-text">Add New</span>
                                     <input type="text" placeholder = "Medication" aria-label="Medication" class="form-control">
@@ -132,7 +134,7 @@
 
 
                                         </table>
-                                        <br>
+                                        <br><br>
                                      
                                   <div class="input-group">
                                     <span class="input-group-text">Add New</span>
@@ -151,3 +153,5 @@
                     </div>
                 </div>
             </div>
+<script src="/js/petChart.js"></script>
+            
