@@ -4,28 +4,39 @@
 const newPetProfile = async (event) => {
   
     event.preventDefault();
-console.log('hello');
   
     const pet_name = document.querySelector('#new-pet-name').value.trim();
-    const pet_type = document.querySelector('#type').value.trim();
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const pet_type = document.querySelector('input[name="type"]:checked').value;
+    const breed = document.querySelector('#pet-breed').value.trim();
+    const vet_clinic = document.querySelector('#vet-clinic').value.trim();
+    const vet_name = document.querySelector('#vet-name').value.trim();
+    const age = document.querySelector('#age').value.trim();
 
     const newPet = document.querySelector('.new-pet');
     
     const user_id = newPet.getAttribute('data-id')
+    console.log(pet_name)
+    console.log(gender)
+    console.log(age)
+    console.log(pet_type)
+    console.log(breed)
+    console.log(vet_clinic)
+    console.log(vet_name)
     
 
 
   
-    if ( pet_name && pet_type && user_id) {
+    if ( pet_name && pet_type && gender && breed && vet_clinic && vet_name && age && user_id) {
       const response = await fetch('/api/pet', {
         method: 'POST',
-        body: JSON.stringify({ pet_name, pet_type, user_id}),
+        body: JSON.stringify({ pet_name, pet_type, gender, breed, vet_clinic, vet_name, age, user_id}),
         headers: { 'Content-Type': 'application/json' },
       });
 
       console.log(response)
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
         alert('Failed to add pet.');
       }

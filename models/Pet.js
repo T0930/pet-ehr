@@ -29,7 +29,7 @@ Pet.init(
       allowNull: true
     },
     age: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     vet_clinic: {

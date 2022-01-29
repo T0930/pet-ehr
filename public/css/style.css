@@ -81,3 +81,21 @@ a {
 .card {
     border: none;
 }
+
+.new-pet {
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.custom-container1 {
+    margin-top: 1rem;
+    background-color: lightblue;
+    padding: 10px;
+    width: 45%;
+    border-radius: 30px;
+    border: solid rgb(67, 67, 175) 10px;
+    margin-bottom: 10rem;
+}
+.custom-col2 {
+    padding-top: 15px;
+}
