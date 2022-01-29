@@ -66,7 +66,7 @@ a {
     color: white;
 }
 
-.new-pet {
+.new-pet1 {
     background-color: rgb(144, 207, 144);
     color: white;
     border: none;
@@ -79,5 +79,5 @@ a {
 }
 
 .card {
-    border-radius: 30px;
+    border: none;
 }
