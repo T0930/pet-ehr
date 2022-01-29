@@ -55,7 +55,7 @@ const newMed = async (event) => {
 
 
 
-  if ( medication && last_given && next_due && pet_id ) {
+  if ( medication || last_given || next_due && pet_id ) {
     const response = await fetch('/api/meds', {
       method: 'POST',
       body: JSON.stringify({ medication, last_given, next_due, pet_id }),
@@ -96,7 +96,7 @@ const newVax = async (event) => {
 
 
 
-  if ( vax_name && administered_date && next_due && pet_id ) {
+  if ( vax_name || administered_date || next_due && pet_id ) {
     const response = await fetch('/api/vax', {
       method: 'POST',
       body: JSON.stringify({ vax_name, administered_date, next_due, pet_id }),
