@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 // *** /api/vax *** - endpoint
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const vaxDb = await Vax.findAll({include: [{model: Pet}]});
     res.status(200).json(vaxDb);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
       const newVax = await Vax.create({
           vax_name: req.body.vax_name,
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const vaxData = await Vax.destroy({
         where: {
