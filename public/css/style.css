@@ -4,30 +4,58 @@
 
 }
 
+.custom-jumbo {
+    background-color: rgb(52, 61, 53);
+    color: white;
+}
+
 .custom-container {
     border-bottom: 3px solid #1c1c20;
-    background-image: linear-gradient(white 50%, rgb(110, 78, 161));
+    /* background-image: linear-gradient(white 50%, rgb(110, 78, 161)); */
+    /* background-color: skyblue; */
 }
 
 .card-container {
     margin-top: 5rem;
 }
 
-.all-card {
-    border: solid #1c1c20 2px;
-    border-radius: 5%;
+.all-card1 {
+    border: solid rgb(170, 96, 96) 4px;
+    border-radius: 30px;
+    background-color: rgb(240, 194, 194);
 }
 
-.cust-card-header {
+.all-card2 {
+    border: solid rgb(173, 115, 61) 4px;
+    border-radius: 30px;
+    background-color: rgb(241, 209, 179) ;
+}
+
+.cust-card-header1 {
     color: white;
-    background-color: #1c1c20;
+    background-color: rgb(170, 96, 96);
     padding: 1rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-.custom-btn {
-    background-color: #1c1c20;
+.cust-card-header2 {
+    color: white;
+    background-color: rgb(173, 115, 61);
+    padding: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.custom-btn1 {
+    background-color: rgb(170, 96, 96);
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.custom-btn2 {
+    background-color: rgb(173, 115, 61);
     color: white;
     margin-top: 10px;
     width: 100%;
@@ -67,7 +95,7 @@ a {
 }
 
 .new-pet1 {
-    background-color: rgb(144, 207, 144);
+    background-color: rgb(68, 65, 65);
     color: white;
     border: none;
     border-radius: 30px;
@@ -113,5 +141,28 @@ a {
 
 .petCard {
     border: none;
-    background-color: gray;
+    background-color: rgb(145, 106, 48);
+    color: white;
+}
+
+
+///////////////////////////////
+
+
+.bodyLogin {
+    background-color: lightblue;
+}
+
+body {
+    background-color: rgb(202, 224, 233);
+}
+
+.custom-star {
+    color: rgb(189, 37, 37);
+}
+
+.card {
+    /* border: navy solid 3px; */
+    background-color: rgb(68, 65, 65);
+    padding: 0;
 }
