@@ -12,7 +12,7 @@ const withAuth = require('../../utils/auth');
 //   res.json(viewAllPets);
 // })
 
-router.get('/chart/:id', async (req, res) => {
+router.get('/chart/:id', withAuth, async (req, res) => {
   try {
    const chartData = await Pet.findOne({
        where: {
@@ -29,7 +29,7 @@ router.get('/chart/:id', async (req, res) => {
    }
  })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
       const dbPetData = await Pet.findByPk(req.params.id);
       const newPetData = dbPetData.get({ plain: true });
@@ -60,7 +60,7 @@ router.get('/:id', async (req, res) => {
 //   });
 
   //Update Pet by ID *** NOT WORKING AT THIS TIME ***
-  router.put('/:id', async (req, res) => {
+  router.put('/:id', withAuth, async (req, res) => {
     try {
       const petData = await Pet.update(
         {
@@ -82,7 +82,7 @@ router.get('/:id', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const petData = await Pet.destroy({
         where: {

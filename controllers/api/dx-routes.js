@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 // *** /api/dx *** - endpoint
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const dxDb = await Dx.findAll({include: [{model: Pet}]});
     res.status(200).json(dxDb);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
       const newDx = await Dx.create({
           diagnosis: req.body.diagnosis,
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
       const dxData = await Dx.destroy({
         where: {
