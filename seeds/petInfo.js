@@ -9,8 +9,8 @@ const petData = [
         age: 4,
         vet_clinic: 'Fairway Knolls',
         vet_name: 'Dr. Smith',
-        type: "",
-        name: "",
+        type: "image/png",
+        name: "horse.png",
         data: "",
         user_id: 1
     },

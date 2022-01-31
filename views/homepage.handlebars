@@ -20,18 +20,7 @@
               <h5 class="card-title text-center">{{pet.pet_name}}</h5>
           </button>
 
-          <form class="mt-4" action="/imageupload" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-              <input type="file" name="file" id="input-files" class="form-control-file border" />
-            </div>
-                            <div class="hidden">
-                <label for="pet-type"><strong>Type</strong></label>
-                <div class="form-check">
-                    <input type="radio" class="form-check-input" value="{{pet.id}}" name="pet_id" checked> {{{req.session.user_id}}}
-                </div>
-                </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
         
         </div>
       </div>
