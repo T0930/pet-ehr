@@ -121,13 +121,15 @@
                                     {{#each pet.dxes as |dx|}}
                                     <tr>                                                                            
                                         <td>{{dx.diagnosis}}</td>
+                                        <td></td>
+                                        <td></td>
                                         <td><button class = "deleteDx" id="dx-chart" data-id="{{dx.id}}">Delete</button></td>
                                     </tr>
-                                    </table>
                                     {{/each}}
+                                     </table>
                                     {{else}}
                                     <div>
-                                        <p>{{pet.pet_name}} has no current diagnosis!</p>
+                                        <p>{{pet.pet_name}} has no current diagnoses!</p>
                                     </div>
                                 {{/if}}     
 
