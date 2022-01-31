@@ -76,14 +76,14 @@
         <div class="col-9">
             <div class="accordion" id="aone">
                 <div class="accordion-item custom-item">
-                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingOne">
+                    <h2 class="accordion-header custom-header" id="panelsStayOpen-headingOne custom-headingOne">
                         <button class="accordion-button custom-abuttonOne" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseOne">
                             Demographics
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show custom-show1"
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body">
                             <div class="container justify-content-between">
@@ -112,7 +112,7 @@
                                 Diagnoses
                             </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse custom-show2"
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
                                 {{#if pet.dxes}}
@@ -149,7 +149,7 @@
                                 Medications
                             </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse custom-show3"
                             aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body">
                             {{#if pet.meds}}
@@ -196,7 +196,7 @@
                                 Vaccinations
                             </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse custom-show4"
                             aria-labelledby="panelsStayOpen-headingFour">
                             <div class="accordion-body">
                                 {{#if pet.vaxes}}
@@ -250,10 +250,6 @@
 
     <script src="/js/petChart.js"></script>
     <script src="/js/updatePet.js"></script>
-<<<<<<< HEAD
-      <script src="/js/deletions.js"></script>
-=======
     <script src="/js/deleteDx.js"></script>
     <script src="/js/deleteMed.js"></script>
     <script src="/js/deleteVax.js"></script>
->>>>>>> main
