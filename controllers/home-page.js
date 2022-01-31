@@ -1,6 +1,12 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth')
-const {Pet, Meds, Vax, Dx} = require('../models')
+const withAuth = require('../utils/auth');
+const upload = require("../middleware/upload");
+// const path = require("path");
+const fs = require("fs");
+const {Pet, Meds, Vax, Dx, Image } = require('../models')
+// const multer = require('multer')
+// const upload = multer({dest: 'resources/static/assets/uploads/'})
+
 
 // commented out while doing chart routes (this is the one we want)
 router.get('/', (req, res) =>{
@@ -43,6 +49,7 @@ router.get('/new', (req, res) =>{
 router.get('/profile', withAuth, async (req, res) => {
     try {
       const viewAllPets = await Pet.findAll({
+        include: [Image],
       where: {
           user_id: req.session.user_id,
         }
@@ -56,8 +63,76 @@ router.get('/profile', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
 
+
+  router.post('/profile', upload.single("file"), (req, res) => {
+    try {
+        console.log(req.file);
+    
+        if (req.file == undefined) {
+          return res.send(`You must select a file.`);
+        }
+    
+
+       const newPet = Pet.create({
+          pet_name: req.body.name,
+          pet_type: req.body.type,
+          gender: req.body.gender,
+          breed: req.body.breed,
+          age: req.body.age,
+          vet_clinic: req.body.clinic,
+          vet_name: req.body.vet,
+          user_id: req.body.user_id,
+          type: req.file.mimetype,
+          name: req.file.originalname,
+          data: fs.readFileSync(
+            __basedir + "/resources/static/assets/uploads/" + req.file.filename
+          ),
+        }).then((image) => {
+          console.log(image)
+          fs.writeFileSync(
+            __basedir + "/public/images/" + image.name,
+            image.data
+          );
+        });
+        return res.redirect('/profile')
+      
+      } catch (err) {
+        res.status(400).json(err);
+      }
+});
+
+
+
+router.post('/imageupload', upload.single("file"), (req, res) => {
+  try {
+      console.log(req.file);
+  
+      if (req.file == undefined) {
+        return res.send(`You must select a file.`);
+      }
+  
+      const newImage = Image.create({
+        type: req.file.mimetype,
+        name: req.file.originalname,
+        pet_id: req.body.pet_id,
+        data: fs.readFileSync(
+          __basedir + "/resources/static/assets/uploads/" + req.file.filename
+        ),
+      }).then((image) => {
+        console.log(image)
+        fs.writeFileSync(
+          __basedir + "/public/images/" + image.name,
+          image.data
+        );
+      });
+  
+        // return res.send(`File has been uploaded.`);
+        // res.status(200).json(newImage);
+      } catch (err) {
+        res.status(400).json(err);
+      }
+});
 
 
   

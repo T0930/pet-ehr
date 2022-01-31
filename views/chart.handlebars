@@ -10,7 +10,23 @@
                     <h5 class="card-title text-center">{{pet.pet_name}}</h5>
                 </div>
             </div>
-            <div><button>Export chart to PDF</button></div>
+            <div>  
+                        <form
+            class=""
+            action="/upload"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group">
+              <input
+                type="file"
+                name="file"
+                id="input-files"
+                class="form-control-file border"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form></div>
         </div>
 
         <div class="col-9">

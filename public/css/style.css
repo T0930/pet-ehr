@@ -99,3 +99,19 @@ a {
 .custom-col2 {
     padding-top: 15px;
 }
+
+.hidden {
+    display: none;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    margin-top: 3px;
+ 
+}
+
+.petCard {
+    border: none;
+    background-color: gray;
+}

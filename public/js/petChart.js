@@ -1,6 +1,6 @@
 
 
-document.querySelectorAll('.card').forEach(function(el){
+document.querySelectorAll('.petCard').forEach(function(el){
     el.addEventListener('click', async function() {
       //alert(this.id);
   

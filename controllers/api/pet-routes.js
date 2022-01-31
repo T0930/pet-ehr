@@ -40,23 +40,23 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.post('/', async (req, res) => {
-    try {
-      const newPet = await Pet.create({
-          pet_name: req.body.pet_name,
-          pet_type: req.body.pet_type,
-          gender: req.body.gender,
-          breed: req.body.breed,
-          age: req.body.age,
-          vet_clinic: req.body.vet_clinic,
-          vet_name: req.body.vet_name,
-          user_id: req.body.user_id, // SHOULD GRAB owner_id from SESSION user_id
-      });
-      res.status(200).json(newPet);
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
+// router.post('/', async (req, res) => {
+//     try {
+//       const newPet = await Pet.create({
+//           pet_name: req.body.pet_name,
+//           pet_type: req.body.pet_type,
+//           gender: req.body.gender,
+//           breed: req.body.breed,
+//           age: req.body.age,
+//           vet_clinic: req.body.vet_clinic,
+//           vet_name: req.body.vet_name,
+//           user_id: req.body.user_id, // SHOULD GRAB owner_id from SESSION user_id
+//       });
+//       res.status(200).json(newPet);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
 
   //Update Pet by ID *** NOT WORKING AT THIS TIME ***
   router.put('/:id', async (req, res) => {

@@ -14,15 +14,15 @@ Pet.init(
     },
     pet_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     pet_type: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true,
     },
     breed: {
       type: DataTypes.STRING,
@@ -30,7 +30,7 @@ Pet.init(
     },
     age: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true,
     },
     vet_clinic: {
       type: DataTypes.STRING,
@@ -40,9 +40,20 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    data: {
+      type: DataTypes.BLOB("long"),
+    },
     user_id:{
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
           model: 'user',
           key: 'id'
