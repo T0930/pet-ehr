@@ -9,6 +9,9 @@ const petData = [
         age: 4,
         vet_clinic: 'Fairway Knolls',
         vet_name: 'Dr. Smith',
+        type: "",
+        name: "",
+        data: "",
         user_id: 1
     },
     {
@@ -19,6 +22,9 @@ const petData = [
         age: 8,
         vet_clinic: 'Eastland Companion Animal Hospital',
         vet_name: 'Dr. Turner',
+        type: "",
+        name: "",
+        data: "",
         user_id: 2
     },
     {
@@ -29,6 +35,9 @@ const petData = [
         age: 1,
         vet_clinic: 'Bortell Animal Hospital',
         vet_name: 'Dr. Bortell',
+        type: "",
+        name: "",
+        data: "",
         user_id: 2
     },
     {
@@ -39,6 +48,9 @@ const petData = [
         age: 10,
         vet_clinic: 'Iowa State Animal Hospital',
         vet_name: 'Dr. Ranger',
+        type: "",
+        name: "",
+        data: "",
         user_id: 1
     },
     {
@@ -49,6 +61,9 @@ const petData = [
         age: 17,
         vet_clinic: 'Ashland Animal Hospital',
         vet_name: 'Dr. Ryan',
+        type: "",
+        name: "",
+        data: "",
         user_id: 4
     },
 ];

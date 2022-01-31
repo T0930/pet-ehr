@@ -1,39 +1,57 @@
-
 <div class="container card-container justify-content-center">
 
 
-        <div class="row justify-content-center">
-             
-{{#each pets as |pet|}}
-            <div class="col-3">
-                <div class="card" id={{pet.id}}>
-                    <div class="card-body">
-                        <img src="https://via.placeholder.com/140x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            
-                            <h5 class="card-title text-center">{{pet.pet_name}}</h5>
-                        </div>
-                    </div>
+  <div class="row justify-content-center">
+
+    {{#each pets as |pet|}}
+    <div class="col-4">
+      <div class="card" id={{pet.id}}>
+        <div class="card-body">
+          <button class="petCard" id={{pet.id}}>
+            {{#if pet.name}}
+            <img src="/images/{{pet.name}}" class="img" alt="...">
+            {{else if pet.image}}
+            <img src="/images/{{image.name}}" class="img" alt="...">
+            {{else}}
+             <img src="/images/defaultanimal.png" class="img" alt="...">
+            {{/if}}
+            <div class="card-body">
+
+              <h5 class="card-title text-center">{{pet.pet_name}}</h5>
+          </button>
+
+          <form class="mt-4" action="/imageupload" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" name="file" id="input-files" class="form-control-file border" />
+            </div>
+                            <div class="hidden">
+                <label for="pet-type"><strong>Type</strong></label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value="{{pet.id}}" name="pet_id" checked> {{{req.session.user_id}}}
                 </div>
-            </div>
-            {{/each}}
+                </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        
         </div>
-        <br>
-         <div class="row justify-content-center">
-            <div class="col-4">
+      </div>
+    </div>
+ 
+  {{/each}}
+</div>
+<br>
+<div class="row justify-content-center">
+  <div class="col-4">
 
-                    <div class="card-body custom-new text-center">
-                         <a href="/new"><button class="new-pet1">Add New Pet</button></a> 
-                    </div>
-
-
-            </div>
-      
-        </div>
+    <div class="card-body custom-new text-center">
+      <a href="/new"><button class="new-pet1">Add New Pet</button></a>
     </div>
 
 
+  </div>
+
+</div>
+</div>
+
+
 <script src="./js/petChart.js"></script>
-
-
-

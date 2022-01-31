@@ -4,6 +4,7 @@ const seedPets = require('./petInfo');
 const seedDx = require('./dx');
 const seedMeds = require('./meds');
 const seedVaxs = require('./vaxInfo');
+// const seedImage = require('./image')
 
 
 
@@ -14,6 +15,7 @@ await seedPets();
 await seedDx();
 await seedMeds();
 await seedVaxs();
+// await seedImage();
 
  
 

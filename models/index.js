@@ -3,6 +3,7 @@ const  User= require('./User')
 const Dx = require('./Dx')
 const Meds = require('./Meds')
 const Vax = require('./Vax')
+const Image = require('./image.model')
 
 
 User.hasMany(Pet, {
@@ -36,4 +37,15 @@ Vax.belongsTo(Pet, {
     foreignKey: 'pet_id'
 })
 
-module.exports = { Pet, User, Dx, Meds, Vax }
+Pet.hasOne(Image, {
+    foreignKey: 'pet_id'
+})
+
+Image.belongsTo(Pet, {
+    foreignKey: 'pet_id',
+    onDelete: 'cascade'
+})
+
+module.exports = { Pet, User, Dx, Meds, Vax, Image }
+
+// module.exports = { Pet, User, Dx, Meds, Vax }
