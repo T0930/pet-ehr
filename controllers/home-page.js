@@ -26,7 +26,7 @@ router.get('/login', (req, res) =>{
     res.render('chart')
 })
 
-router.get('/chart/:id', async (req, res) => {
+router.get('/chart/:id', withAuth, async(req, res) => {
  try {
   const chartData = await Pet.findOne({
     where: {
@@ -40,7 +40,7 @@ router.get('/chart/:id', async (req, res) => {
   }
 })
 
-router.get('/new', (req, res) =>{
+router.get('/new', withAuth, (req, res) =>{
     res.render('new-pet-form', {
         user_id: req.session.user_id,
     })
