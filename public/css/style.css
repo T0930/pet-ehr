@@ -208,3 +208,56 @@ body {
     border: none;
     text-align: end;
 }
+
+.saveVax {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+.saveMed {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.saveDx {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.deleteVax {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.deleteMed {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.deleteDx {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}

@@ -116,14 +116,15 @@
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
                                 {{#if pet.dxes}}
-                                   <table style="width:100%">
-                               
+                                   <table style="width:145%">
+                    
                                     {{#each pet.dxes as |dx|}}
                                     <tr>                                                                            
                                         <td>{{dx.diagnosis}}</td>
                                         <td></td>
                                         <td></td>
-                                        <td><button class = "deleteDx" id="dx-chart" data-id="{{dx.id}}">Delete</button></td>
+                                        <td></td>
+                                        <td><button class = "deleteDx" id="dx-chart" data-id="{{dx.id}}">DELETE</button></td>
                                     </tr>
                                     {{/each}}
                                      </table>
@@ -134,11 +135,13 @@
                                 {{/if}}     
 
                                 <br><br>
+                                <div class="addNDX"><strong>Add New Diagnosis</strong></div>
                                 <div class="input-group">
-                                    <span class="input-group-text">Add New</span>
-                                    <input type="text" placeholder="Diagnosis" aria-label="Diagnosis"
+                                    
+                                       <input type="text" placeholder="Diagnosis" aria-label="Diagnosis"
                                         data-id="{{pet.id}}" id="new-dx" class="form-control new-dx">
-                                    <button class="saveDx">Save</button>
+                                    <button class="saveDx">SAVE</button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -166,7 +169,7 @@
                                         <td>{{med.medication}}</td>
                                         <td>{{med.last_given}}</td>
                                         <td>{{med.next_due}}</td>
-                                        <td><button class = "deleteMed" id="med-chart" data-id="{{med.id}}">Delete</button></td>
+                                        <td><button class = "deleteMed" id="med-chart" data-id="{{med.id}}">DELETE</button></td>
                                     </tr>
                                     {{/each}}
                                     {{else}}
@@ -176,15 +179,16 @@
                                 {{/if}}
                                 </table>
                                 <br><br>
+                                <div class="addNMED"><strong>Add New Medication</strong></div>
                                 <div class="input-group">
-                                    <span class="input-group-text">Add New</span>
+                                    
                                     <input type="text" placeholder="Medication" aria-label="Medication"
                                         data-id="{{pet.id}}" id="new-med" class="form-control new-med">
                                     <input type="text" placeholder="Last Given" aria-label="mLast-Given"
                                         data-id="{{pet.id}}" id="med-given" class="form-control med-given">
                                     <input type="text" placeholder="Next Due" aria-label="mNext-Due"
                                         data-id="{{pet.id}}" id="next-due" class="form-control next-due">
-                                    <button class="saveMed">Save</button>
+                                    <button class="saveMed">SAVE</button>
                                 </div>
 
                             </div>
@@ -213,7 +217,7 @@
                                         <td>{{vax.vax_name}}</td>
                                         <td>{{vax.administered_date}}</td>
                                         <td>{{vax.next_due}}</td>
-                                        <td><button class="deleteVax" id="vax-chart" data-id="{{vax.id}}">Delete</button></td>
+                                        <td><button class="deleteVax" id="vax-chart" data-id="{{vax.id}}">DELETE</button></td>
                                     </tr>
                                     {{/each}}
                                     {{else}}
@@ -226,15 +230,16 @@
                                 </table>
                                 <br><br>
 
+<div class="addNVAX"><strong>Add New Vaccine</strong></div>
                                 <div class="input-group">
-                                    <span class="input-group-text">Add New</span>
+                                   
                                     <input type="text" placeholder="Vaccine" aria-label="Vaccine" data-id="{{pet.id}}"
                                         id="new-vax" class="form-control new-vax">
                                     <input type="text" placeholder="Last Given" aria-label="vLast-Given"
                                         data-id="{{pet.id}}" id="vax-given" class="form-control new-vax">
                                     <input type="text" placeholder="Next Due" aria-label="vNext-Due"
                                         data-id="{{pet.id}}" id="vax-due" class="form-control new-vax">
-                                    <button class="saveVax">Save</button>
+                                    <button class="saveVax">SAVE</button>
                                 </div>
 
 
