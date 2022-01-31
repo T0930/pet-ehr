@@ -25,10 +25,13 @@ document.querySelector('.deleteMed').addEventListener('click', deleteMed);
 
 // delete vaccines
 const deleteVax = async function() {
+  const deleteV = document.querySelector('.deleteVax')
+  const vax_id = deleteV.getAttribute('data-id')
+  console.log(vax_id)
 
-  await fetch(`/api/vax/:id`, {
-    method: 'DELETE'
-  });
+  // await fetch(`/api/vax/${vax_id}`, {
+  //   method: 'DELETE'
+  // });
 
   // document.location.replace('/');
 };

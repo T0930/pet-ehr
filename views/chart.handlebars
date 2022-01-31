@@ -183,7 +183,7 @@
                         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingFour">
                             <div class="accordion-body">
-                                <table style="width:100%">
+                                <table class="deleteVax" data-id="{{pet.vax.id}}" style="width:100%">
                                     <tr>
                                         <th>Vaccine</th>
                                         <th>Last Given</th>
@@ -194,7 +194,7 @@
                                         <td>{{vax.vax_name}}</td>
                                         <td>{{vax.administered_date}}</td>
                                         <td>{{vax.next_due}}</td>
-                                        <td><button>Delete</button></td>
+                                        <td><button class="deleteVax" >Delete</button></td>
                                     </tr>
                                     {{/each}}
 
@@ -229,3 +229,4 @@
 
     <script src="/js/petChart.js"></script>
     <script src="/js/updatePet.js"></script>
+      <script src="/js/deletions.js"></script>
