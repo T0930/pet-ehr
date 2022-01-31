@@ -95,7 +95,7 @@ a {
 }
 
 .new-pet1 {
-    background-color: rgb(144, 207, 144);
+    background-color: rgb(68, 65, 65);
     color: white;
     border: none;
     border-radius: 30px;
@@ -141,7 +141,8 @@ a {
 
 .petCard {
     border: none;
-    background-color: gray;
+    background-color: rgb(145, 106, 48);
+    color: white;
 }
 
 
@@ -158,4 +159,10 @@ body {
 
 .custom-star {
     color: rgb(189, 37, 37);
+}
+
+.card {
+    /* border: navy solid 3px; */
+    background-color: rgb(68, 65, 65);
+    padding: 0;
 }
