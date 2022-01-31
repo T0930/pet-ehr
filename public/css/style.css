@@ -163,7 +163,7 @@ a {
 }
 
 
-///////////////////////////////
+/* /////////////////////////////// */
 
 
 .bodyLogin {
@@ -189,4 +189,26 @@ body {
     background-color: rgb(52, 61, 53);
     border: none;
     text-align: end;
+}
+
+
+
+#demographics {
+    background-color: #934020;
+    color: white;
+}
+
+#diagnoses {
+    background-color: #3d242d;
+    color: white;
+}
+
+#medications {
+    background-color: #2e4e2b;
+    color: white;
+}
+
+#vaccinations {
+    background-color: #022345;
+    color: white;
 }
