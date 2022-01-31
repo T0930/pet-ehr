@@ -16,7 +16,7 @@
 }
 
 .card-container {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .all-card1 {
@@ -74,25 +74,42 @@ a {
 }
 
 .custom-abuttonOne {
-    background-color: rgb(69, 124, 168);
+    background-color: #934020;
     color: white;
 
 }
 
 .custom-abuttonTwo {
-    background-color: rgb(51, 131, 64);
+    background-color: #3d242d;
     color: white;
 }
 
 .custom-abuttonThree {
-    background-color: rgb(170, 90, 143);
+    background-color: #2e4e2b;
     color: white;
 }
 
 .custom-abuttonFour {
-    background-color: rgb(158, 102, 17);
+    background-color: #022345;
     color: white;
 }
+
+.custom-show1 {
+    background-color: #e9cdc2;
+}
+
+.custom-show2 {
+    background-color: #eed7df;
+}
+
+.custom-show3 {
+    background-color: #d3e6d2;
+}
+
+.custom-show4 {
+    background-color: #b4c5d6;
+}
+
 
 .new-pet1 {
     background-color: rgb(68, 65, 65);
@@ -165,4 +182,11 @@ body {
     /* border: navy solid 3px; */
     background-color: rgb(68, 65, 65);
     padding: 0;
+}
+
+.logout {
+    color: white;
+    background-color: rgb(52, 61, 53);
+    border: none;
+    text-align: end;
 }
