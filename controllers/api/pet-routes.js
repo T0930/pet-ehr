@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, Meds, Dx, Vax } = require('../../models');
+const { Pet, Meds, Dx, Vax, Image } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
@@ -15,12 +15,13 @@ const withAuth = require('../../utils/auth');
 router.get('/chart/:id', async (req, res) => {
   try {
    const chartData = await Pet.findOne({
-     where: {
+       where: {
        id: req.params.id,
      },
-     include: [{model: Meds}, {model: Dx}, {model: Vax}]});
+     include: [{model: Meds}, {model: Dx}, {model: Vax}, {model: Image}]});
      const pet = chartData.get({ plain: true });
-     //return pet;
+    //  return pet;
+     res.json(pet)
     res.render('chart',
        {pet});
    } catch (err) {
