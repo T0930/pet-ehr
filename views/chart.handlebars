@@ -115,16 +115,28 @@
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
-                                {{#each pet.dxes as |dx|}}
-                                <div class="demo">{{dx.diagnosis}} </div>
-                                {{/each}}
+                                {{#if pet.dxes}}
+                                   <table style="width:100%">
+                               
+                                    {{#each pet.dxes as |dx|}}
+                                    <tr>                                                                            
+                                        <td>{{dx.diagnosis}}</td>
+                                        <td><button class = "deleteDx" id="dx-chart" data-id="{{dx.id}}">Delete</button></td>
+                                    </tr>
+                                    </table>
+                                    {{/each}}
+                                    {{else}}
+                                    <div>
+                                        <p>{{pet.pet_name}} has no current diagnosis!</p>
+                                    </div>
+                                {{/if}}     
+
                                 <br><br>
                                 <div class="input-group">
                                     <span class="input-group-text">Add New</span>
                                     <input type="text" placeholder="Diagnosis" aria-label="Diagnosis"
                                         data-id="{{pet.id}}" id="new-dx" class="form-control new-dx">
                                     <button class="saveDx">Save</button>
-                                    <button class="deleteDx">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -140,6 +152,7 @@
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body">
+                            {{#if pet.meds}}
                                 <table style="width:100%">
                                     <tr>
                                         <th>Medication Name</th>
@@ -151,10 +164,14 @@
                                         <td>{{med.medication}}</td>
                                         <td>{{med.last_given}}</td>
                                         <td>{{med.next_due}}</td>
-                                        <td><button>Delete</button></td>
+                                        <td><button class = "deleteMed" id="med-chart" data-id="{{med.id}}">Delete</button></td>
                                     </tr>
                                     {{/each}}
-
+                                    {{else}}
+                                    <div>
+                                        <p>{{pet.pet_name}} has no current medications!</p>
+                                    </div>
+                                {{/if}}
                                 </table>
                                 <br><br>
                                 <div class="input-group">
@@ -166,7 +183,6 @@
                                     <input type="text" placeholder="Next Due" aria-label="mNext-Due"
                                         data-id="{{pet.id}}" id="next-due" class="form-control next-due">
                                     <button class="saveMed">Save</button>
-                                    <button class="deleteMed">Delete</button>
                                 </div>
 
                             </div>
@@ -183,7 +199,8 @@
                         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingFour">
                             <div class="accordion-body">
-                                <table class="deleteVax" data-id="{{pet.vax.id}}" style="width:100%">
+                                {{#if pet.vaxes}}
+                                <table style="width:100%">
                                     <tr>
                                         <th>Vaccine</th>
                                         <th>Last Given</th>
@@ -194,9 +211,14 @@
                                         <td>{{vax.vax_name}}</td>
                                         <td>{{vax.administered_date}}</td>
                                         <td>{{vax.next_due}}</td>
-                                        <td><button class="deleteVax" >Delete</button></td>
+                                        <td><button class="deleteVax" id="vax-chart" data-id="{{vax.id}}">Delete</button></td>
                                     </tr>
                                     {{/each}}
+                                    {{else}}
+                                      <div>
+                                        <p>{{pet.pet_name}} has no current vaccinations!</p>
+                                    </div>
+                                {{/if}}  
 
 
                                 </table>
@@ -211,7 +233,6 @@
                                     <input type="text" placeholder="Next Due" aria-label="vNext-Due"
                                         data-id="{{pet.id}}" id="vax-due" class="form-control new-vax">
                                     <button class="saveVax">Save</button>
-                                    <button class="deleteVax">Delete</button>
                                 </div>
 
 
@@ -229,4 +250,10 @@
 
     <script src="/js/petChart.js"></script>
     <script src="/js/updatePet.js"></script>
+<<<<<<< HEAD
       <script src="/js/deletions.js"></script>
+=======
+    <script src="/js/deleteDx.js"></script>
+    <script src="/js/deleteMed.js"></script>
+    <script src="/js/deleteVax.js"></script>
+>>>>>>> main
