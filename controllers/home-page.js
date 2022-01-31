@@ -32,7 +32,7 @@ router.get('/chart/:id', async (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [{model: Meds}, {model: Dx}, {model: Vax}]});
+    include: [{model: Meds}, {model: Dx}, {model: Vax}, {model: Image }]});
     const pet = chartData.get({ plain: true });
     res.render('chart', {pet});
   } catch (err) {
@@ -94,8 +94,9 @@ router.get('/profile', withAuth, async (req, res) => {
             __basedir + "/public/images/" + image.name,
             image.data
           );
+            return res.redirect('/profile')
         });
-        return res.redirect('/profile')
+      
       
       } catch (err) {
         res.status(400).json(err);
@@ -127,8 +128,7 @@ router.post('/imageupload', upload.single("file"), (req, res) => {
         );
       });
   
-        // return res.send(`File has been uploaded.`);
-        // res.status(200).json(newImage);
+
       } catch (err) {
         res.status(400).json(err);
       }
