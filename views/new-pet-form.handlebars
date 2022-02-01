@@ -1,13 +1,14 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-8 mt-3">
+<div class="container custom-container1 ">
+    <div class="row justify-content-center">
+        <div class="col mt-3 cust-col">
+            <header class="new-header">
+<h3>New Pet Form</h3>
+
+            </header>
 
             <form class="mt-4 new-pet" data-id="{{user_id}}" action="/profile" method="POST"
                 enctype="multipart/form-data">
-                <div class="form-group">
-                    <input type="file" name="file" id="input-files" class="form-control-file border" />
 
-                </div>
                 <div class="form-group">
                     <label for="pet-name"><strong>Pet Name</strong></label>
                     <input type="input" class="form-control pet-name" id="new-pet-name" name="name" aria-describedby="newPet"
@@ -69,17 +70,19 @@
                 </div>
                 </div>
                 <br>
+                                <div class="form-group">
+                    <div><strong>Upload a photo</strong> </div>
+                    <input type="file" name="file" id="input-files" class="form-control-file border" />
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <br>
+
+                <button type="submit" class="btn spec-btn">Submit</button>
             </form>
         </div>
     </div>
-    <hr />
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="preview-images"></div>
-        </div>
-    </div>
+   
+
 </div>
 
 

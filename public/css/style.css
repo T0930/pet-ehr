@@ -17,6 +17,9 @@
 
 .card-container {
     margin-top: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+
 }
 
 .all-card1 {
@@ -134,16 +137,34 @@ a {
 
 .custom-container1 {
     margin-top: 1rem;
-    background-color: lightblue;
-    padding: 10px;
-    width: 45%;
-    border-radius: 30px;
-    border: solid rgb(67, 67, 175) 10px;
+    background-color: rgb(230, 184, 173);
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 60%;
+    /* border-radius: 30px; */
+    border: solid rgb(185, 74, 34) 10px;
     margin-bottom: 10rem;
 }
 .custom-col2 {
     padding-top: 15px;
 }
+
+.new-header {
+    background-color: rgb(185, 74, 34);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.spec-btn {
+    background-color: rgb(185, 74, 34);
+    color: white;
+}
+
+/* .cust-col {
+    padding: 6rem;
+} */
 
 .hidden {
     display: none;
@@ -184,6 +205,13 @@ body {
     padding: 0;
 }
 
+.animal-card {
+    background-color: rgb(89, 88, 112);
+    padding: 1rem;
+    color: white;
+    border: solid 3px rgb(49, 46, 46);
+}
+
 .logout {
     color: white;
     background-color: rgb(52, 61, 53);
@@ -191,7 +219,75 @@ body {
     text-align: end;
 }
 
+.saveVax {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+.saveMed {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
 
+.saveDx {
+    background-color: #022345;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.deleteVax {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.deleteMed {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.deleteDx {
+    background-color: rgb(189, 37, 37);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.uploadchartbtn {
+    background-color: rgb(49, 46, 46);
+    color: white;
+    width: 100%;
+
+}
+
+.custom-file-upload {
+    background-color: rgb(152, 152, 177);
+    width: 100%;
+}
+
+
+#uploadbtn {
+    /* background-color: black; */
+}
 
 #demographics {
     background-color: #934020;
