@@ -17,6 +17,9 @@
 
 .card-container {
     margin-top: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+
 }
 
 .all-card1 {
@@ -202,6 +205,13 @@ body {
     padding: 0;
 }
 
+.animal-card {
+    background-color: rgb(89, 88, 112);
+    padding: 1rem;
+    color: white;
+    border: solid 3px rgb(49, 46, 46);
+}
+
 .logout {
     color: white;
     background-color: rgb(52, 61, 53);
@@ -260,4 +270,21 @@ body {
     border-radius: 20px;
     padding: 5px;
     font-size: 10px;
+}
+
+.uploadchartbtn {
+    background-color: rgb(49, 46, 46);
+    color: white;
+    width: 100%;
+
+}
+
+.custom-file-upload {
+    background-color: rgb(152, 152, 177);
+    width: 100%;
+}
+
+
+#uploadbtn {
+    /* background-color: black; */
 }

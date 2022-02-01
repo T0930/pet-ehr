@@ -5,7 +5,7 @@
     <div class="row chart-row justify-content-between">
 
         <div class="col-3">
-            <div class="card" id={{pet.id}}>
+            <div class="card animal-card" id={{pet.id}}>
                 {{#if pet.name}}
                 <img src="/images/{{pet.name}}" class="img" alt="...">
                 {{else if pet.image}}
@@ -16,7 +16,7 @@
 
                 {{/if}}
                         
-
+<br>
               <h5 class="card-title text-center">{{pet.pet_name}}</h5>
   
 
@@ -54,9 +54,13 @@
                 </div>
                 {{else}}
                                 {{!-- <div class="hidden"> --}}
+                                    <br>
+                                    <div class="file-upload-chart text-center" id="uploadbtn">
                     <form class="mt-4" action="/imageupload" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <input type="file" name="file" id="input-files" class="form-control-file border" />
+                        <div class="form-group" id="uploadbtn">
+                            <label class="custom-file-upload">
+                            <input type="file" name="file" id="input-files" class="form-control-file " />
+                            </label>
                         </div>
                         <div class="hidden">
                             <label for="pet-type"><strong>Type</strong></label>
@@ -65,15 +69,19 @@
                                 {{{req.session.user_id}}}
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                       
+                        </div>
+                        <button type="submit" class="btn uploadchartbtn">Submit</button>
+                     
                     </form>
+
                 {{!-- </div> --}}
                 {{/if}}
             </div>
         </div>
 
 
-        <div class="col-9">
+        <div class="col">
             <div class="accordion" id="aone">
                 <div class="accordion-item custom-item">
                     <h2 class="accordion-header custom-header" id="panelsStayOpen-headingOne custom-headingOne">
