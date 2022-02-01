@@ -184,7 +184,7 @@ a {
 }
 
 
-///////////////////////////////
+/* /////////////////////////////// */
 
 
 .bodyLogin {
@@ -287,4 +287,24 @@ body {
 
 #uploadbtn {
     /* background-color: black; */
+
+
+#demographics {
+    background-color: #934020;
+    color: white;
+}
+
+#diagnoses {
+    background-color: #3d242d;
+    color: white;
+}
+
+#medications {
+    background-color: #2e4e2b;
+    color: white;
+}
+
+#vaccinations {
+    background-color: #022345;
+    color: white;
 }
