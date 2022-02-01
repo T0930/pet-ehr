@@ -317,6 +317,10 @@ input[type="file" i] {
     width: 100%;
 }
 
-input{
+/* input{
     background-color: black;
+} */
+
+#input-files {
+    background-color: rgb(250, 227, 219);
 }
