@@ -16,9 +16,11 @@
 * Utilized MULTER to save and retrieve user uploaded photos for their pet's profile.
 
 # Screen Shots:  
-![Preview](willupdate)
+![Preview](https://github.com/eburger939/pet-ehr/blob/Tom/public/images/homepagess.png)
+![Preview](https://github.com/eburger939/pet-ehr/blob/Tom/public/images/userpetss.png)
+![Preview](https://github.com/eburger939/pet-ehr/blob/Tom/public/images/petprofiless.png)
 
 # Repository link and deployed application:
 [pet-ehr Repository](https://github.com/eburger939/pet-ehr)
 #
-[Deployed Link](willupdate)
+[Deployed Link](https://pet-rec.herokuapp.com/)
