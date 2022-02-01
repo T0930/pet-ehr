@@ -1,4 +1,4 @@
-
+<button class="goBack"><strong>Back to Profile</strong></button>
 
 <div class="container card-container">
 
@@ -124,14 +124,14 @@
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
                                 {{#if pet.dxes}}
-                                   <table style="width:145%">
+                                   <table style="width:132%">
                     
                                     {{#each pet.dxes as |dx|}}
                                     <tr>                                                                            
                                         <td>{{dx.diagnosis}}</td>
                                         <td></td>
                                         <td></td>
-                                        <td></td>
+                                        {{!-- <td></td> --}}
                                         <td><button class = "deleteDx" id="dx-chart" data-id="{{dx.id}}">DELETE</button></td>
                                     </tr>
                                     {{/each}}

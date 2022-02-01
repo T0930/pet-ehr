@@ -285,8 +285,11 @@ body {
 }
 
 
-#uploadbtn {
-    /* background-color: black; */
+.goBack {
+    background-color: rgb(202, 224, 233);
+    border: none;
+    /* background-color: gray; */
+    /* color: white; */
 }
 
 #demographics {
@@ -307,4 +310,13 @@ body {
 #vaccinations {
     background-color: #022345;
     color: white;
+}
+
+input[type="file" i] {
+    background-color: rgb(152, 152, 177);
+    width: 100%;
+}
+
+input{
+    background-color: black;
 }
