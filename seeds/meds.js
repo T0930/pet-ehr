@@ -8,7 +8,7 @@ const medsData = [
         pet_id: 1
     },
     {
-        medication: 'Advantix',
+        medication: 'AdvanTix',
         last_given: 'January 15, 2022',
         next_due: "Februrary 15, 2022",
         pet_id: 1

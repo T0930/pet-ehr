@@ -21,9 +21,10 @@ router.get('/chart/:id', withAuth, async (req, res) => {
      include: [{model: Meds}, {model: Dx}, {model: Vax}, {model: Image}]});
      const pet = chartData.get({ plain: true });
     //  return pet;
-     res.json(pet)
+    //  res.json(pet)
     res.render('chart',
-       {pet});
+       {pet,
+        loggedIn: req.session.loggedIn,});
    } catch (err) {
      res.status(500).json(err);
    }

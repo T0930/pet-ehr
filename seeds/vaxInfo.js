@@ -2,25 +2,25 @@ const { Vax } = require('../models');
 
 const vaxData = [
     {
-        vax_name: 'parvovirus',
+        vax_name: 'Parvovirus',
         administered_date: 'January 28, 2022',
         next_due: 'January 28, 2023',
         pet_id: 1
     },
     {
-        vax_name: 'rabies',
+        vax_name: 'Rabies',
         administered_date: 'December 12, 2021',
         next_due: 'May 12, 2022',
         pet_id: 1
     },
     {
-        vax_name: 'adenovirus',
+        vax_name: 'Adenovirus',
         administered_date: 'October 27, 2021',
         next_due: 'October 27, 2025',
         pet_id: 1
     },
     {
-        vax_name: 'hepatitis',
+        vax_name: 'Hepatitis',
         administered_date: 'September 22, 2021',
         next_due: 'March 22, 2022',
         pet_id: 1
